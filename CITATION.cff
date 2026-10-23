@@ -1,0 +1,38 @@
+# This file is used by GitHub's "Cite this repository" button.
+# Derivative record first, upstream record under preferred-citation.
+
+cff-version: 1.2.0
+message: "If you use this knowledge base, please cite both this derivative and the original shiji-kb by Bao Jie."
+title: "shiji-kb (derivative): Records of the Grand Historian Knowledge Base"
+authors:
+  - alias: "langking1982"
+    website: "https://github.com/langking1982"
+type: software
+repository-code: "https://github.com/langking1982/shiji-kb"
+abstract: >-
+  An interactive knowledge graph built from the Records of the Grand Historian
+  (史记): 14,065 entities, 126,441 annotations across 22 types, 3,198 historical
+  events, and 130 interactive timelines. This is a community derivative of
+  baojie/shiji-kb with compliance and engineering upgrades. AI-assisted
+  annotation; not an authoritative historical source.
+keywords:
+  - shiji
+  - Records of the Grand Historian
+  - knowledge graph
+  - digital humanities
+  - NER
+  - ancient Chinese texts
+license:
+  - id: CC-BY-NC-SA-4.0
+    name: "Attribution-NonCommercial-ShareAlike 4.0 International (annotated data)"
+  - id: MIT
+    name: "MIT License (analysis scripts)"
+date-released: "2026-10-23"
+preferred-citation:
+  type: software
+  title: "shiji-kb: 史记知识库"
+  authors:
+    - family-names: 鲍
+      given-names: 捷
+  repository-code: "https://github.com/baojie/shiji-kb"
+  year: 2026

@@ -1,5 +1,12 @@
 # 史记知识库 - 让两千年的文字活过来
 
+> [!NOTE]
+> **衍生声明**：本仓库是 [baojie/shiji-kb（史记知识库）](https://github.com/baojie/shiji-kb) 的社区衍生升级版，
+> **鸣谢原作者 [鲍捷 @baojie](https://github.com/baojie)** 的开源贡献。衍生改动见 [UPGRADES.md](UPGRADES.md)，
+> 完整出处与许可链见 [NOTICE.md](NOTICE.md)，英文说明见 [README_EN.md](README_EN.md)。
+> 许可构成不变：标注数据 CC BY-NC-SA 4.0 / 分析脚本 MIT，**商用需原作者授权**。
+
+
 > 两千年来我们读《史记》，现在让机器帮我们"看见"隐藏的知识网络。
 
 **在线阅读（GitHub Pages）**: [https://baojie.github.io/shiji-kb](https://baojie.github.io/shiji-kb) | **Wiki**: [https://baojie.github.io/shiji-kb/wiki/](https://baojie.github.io/shiji-kb/wiki/)
