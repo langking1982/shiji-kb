@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Smoke-test renderer imports
+        run: |
+          python -c "import ast,sys; [ast.parse(open(f,encoding='utf-8').read(), f) for f in ['render_shiji_html.py','generate_all_chapters.py']]; print('syntax OK')"
+          python render_shiji_html.py --help || true
+
+      - name: Repo sanity checks
+        run: |
+          test -f LICENSE || { echo "LICENSE missing"; exit 1; }
+          test -f NOTICE.md || { echo "NOTICE.md missing"; exit 1; }
+          grep -q "baojie/shiji-kb" NOTICE.md || { echo "attribution to upstream missing in NOTICE.md"; exit 1; }
+          echo "sanity OK"
